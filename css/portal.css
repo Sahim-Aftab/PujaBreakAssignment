@@ -1,0 +1,812 @@
+/* ==========================================================================
+   Ajmal Super 40 - Portal, CBT Engine, Predictor & Marksheet Stylesheet
+   ========================================================================== */
+
+:root {
+    --cbt-header-bg: #0c2f2a;
+    --cbt-body-bg: #f3f6f4;
+    --cbt-card-bg: #ffffff;
+    --cbt-primary: #14534c;
+    --cbt-accent: #e8b84a;
+    --cbt-green: #10b981;
+    --cbt-red: #ef4444;
+    --cbt-purple: #8b5cf6;
+    --cbt-orange: #f59e0b;
+    --cbt-gray: #6b7280;
+}
+
+/* ==========================================================================
+   Digital Marksheet & Result Verification
+   ========================================================================== */
+.verification-search-box {
+    background: #ffffff;
+    border: 2px solid var(--line);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 36px;
+}
+
+.verification-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+.verification-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.verification-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    background: #fcfdfc;
+    color: var(--green-dark);
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.verification-input:focus {
+    border-color: var(--green);
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(20, 83, 76, 0.12);
+}
+
+.quick-roll-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+    align-items: center;
+}
+
+.quick-roll-pills span {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.roll-pill {
+    padding: 6px 14px;
+    border-radius: 50px;
+    background: #eef5f2;
+    border: 1px solid #c9ded6;
+    color: var(--green-dark);
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.roll-pill:hover {
+    background: var(--gold);
+    color: var(--green-dark);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+/* Marksheet Certificate View */
+.marksheet-card {
+    position: relative;
+    background: #ffffff;
+    border: 2px solid #d4af37;
+    border-radius: 16px;
+    padding: 44px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-top: 24px;
+    isolation: isolate;
+}
+
+.marksheet-watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.marksheet-watermark img {
+    width: 480px;
+    height: 480px;
+    object-fit: contain;
+}
+
+.marksheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #e2ece7;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+}
+
+.marksheet-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.marksheet-brand img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.marksheet-title h2 {
+    margin: 0;
+    font-size: 1.7rem;
+    color: var(--green-dark);
+}
+
+.marksheet-title p {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.verified-seal-badge {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.seal-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    background: #ecfdf5;
+    border: 1px solid #10b981;
+    color: #065f46;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.verification-meta {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 6px;
+    font-family: monospace;
+}
+
+.candidate-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    background: #f8faf9;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 28px;
+}
+
+.profile-field strong {
+    display: block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    margin-bottom: 3px;
+}
+
+.profile-field span {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.marks-breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+}
+
+.marks-breakdown-table th,
+.marks-breakdown-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+}
+
+.marks-breakdown-table th {
+    background: #0f3d37;
+    color: #ffffff;
+    font-size: 0.92rem;
+}
+
+.marks-total-row {
+    background: #eef7f3;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--green-dark);
+}
+
+.allotment-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: linear-gradient(135deg, #092823 0%, #14534c 100%);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 20px 26px;
+    margin-top: 26px;
+}
+
+.allotment-details h4 {
+    margin: 0;
+    color: var(--gold);
+    font-size: 1.15rem;
+}
+
+.allotment-details p {
+    margin: 4px 0 0;
+    color: #e2ece7;
+    font-size: 0.95rem;
+}
+
+.marksheet-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+/* Print Stylesheet */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .marksheet-card,
+    .marksheet-card * {
+        visibility: visible;
+    }
+    .marksheet-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        border: 2px solid #000;
+        box-shadow: none;
+        padding: 20px;
+    }
+    .marksheet-actions,
+    .sticky-header-wrapper,
+    .site-nav,
+    .site-footer,
+    .verification-search-box {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+   CBT (Computer Based Test) Exam Engine Console
+   ========================================================================== */
+.cbt-container {
+    background: var(--cbt-body-bg);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin: 20px 0 40px;
+}
+
+.cbt-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--cbt-header-bg);
+    color: #ffffff;
+    padding: 14px 24px;
+    border-bottom: 2px solid var(--gold);
+}
+
+.cbt-exam-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.cbt-timer-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(232, 184, 74, 0.4);
+}
+
+.cbt-timer-label {
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.cbt-timer-digits {
+    font-family: monospace;
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 0.08em;
+}
+
+.cbt-timer-digits.warning {
+    color: #ef4444;
+    animation: pulseTimer 1s infinite alternate;
+}
+
+@keyframes pulseTimer {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0.7; transform: scale(1.05); }
+}
+
+.cbt-sub-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid var(--line);
+    padding: 10px 24px;
+}
+
+.cbt-sections-nav {
+    display: flex;
+    gap: 8px;
+}
+
+.cbt-section-tab {
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+    background: #f8faf9;
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cbt-section-tab.active {
+    background: var(--green);
+    color: #ffffff;
+    border-color: var(--green);
+}
+
+.cbt-marking-info {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.cbt-marking-info span {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.cbt-marking-info span.negative {
+    color: #ef4444;
+}
+
+.cbt-exam-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    min-height: 520px;
+}
+
+.cbt-question-area {
+    background: #ffffff;
+    padding: 32px;
+    border-right: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+}
+
+.question-num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--green-dark);
+}
+
+.question-topic-badge {
+    background: #eef5f2;
+    color: var(--green-dark);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.question-text {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #1a2e2b;
+    margin-bottom: 26px;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    border: 2px solid var(--line);
+    border-radius: 10px;
+    background: #fbfdfc;
+    cursor: pointer;
+    font-size: 1.05rem;
+    transition: all 0.2s ease;
+}
+
+.option-item:hover {
+    border-color: var(--green);
+    background: #f4faf7;
+}
+
+.option-item.selected {
+    border-color: var(--green);
+    background: #ecfdf5;
+    font-weight: 700;
+    color: var(--green-dark);
+}
+
+.option-item input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.cbt-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+}
+
+.cbt-btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cbt-btn-save {
+    background: var(--green);
+    color: #ffffff;
+}
+
+.cbt-btn-save:hover {
+    background: var(--green-dark);
+    transform: translateY(-2px);
+}
+
+.cbt-btn-review {
+    background: #8b5cf6;
+    color: #ffffff;
+}
+
+.cbt-btn-clear {
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.cbt-btn-submit {
+    background: linear-gradient(135deg, #e8b84a, #d4a034);
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+/* Palette Sidebar */
+.cbt-palette-sidebar {
+    background: #f8faf9;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.palette-legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 24px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.badge-answered { background: #10b981; }
+.badge-unanswered { background: #ef4444; }
+.badge-review { background: #8b5cf6; }
+.badge-unvisited { background: #9ca3af; }
+
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-height: 280px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.palette-btn {
+    height: 42px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: #e5e7eb;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+.palette-btn.current {
+    box-shadow: 0 0 0 3px var(--gold);
+    font-weight: 800;
+}
+
+.palette-btn.answered {
+    background: #10b981;
+    color: #ffffff;
+}
+
+.palette-btn.unanswered {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.palette-btn.review {
+    background: #8b5cf6;
+    color: #ffffff;
+}
+
+/* Results Scorecard Modal / View */
+.cbt-scorecard-view {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 36px;
+    margin-top: 24px;
+    border: 2px solid var(--line);
+}
+
+.scorecard-summary-tiles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.score-tile {
+    padding: 20px;
+    border-radius: 12px;
+    background: #f8faf9;
+    border: 1px solid var(--line);
+    text-align: center;
+}
+
+.score-tile-val {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-family: Georgia, serif;
+    color: var(--green-dark);
+}
+
+.score-tile-lbl {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+.solution-accordion-item {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.solution-header {
+    padding: 16px 20px;
+    background: #fbfdfc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.solution-header.is-correct {
+    border-left: 5px solid #10b981;
+}
+
+.solution-header.is-incorrect {
+    border-left: 5px solid #ef4444;
+}
+
+.solution-header.is-unattempted {
+    border-left: 5px solid #9ca3af;
+}
+
+.solution-body {
+    padding: 20px;
+    background: #ffffff;
+    border-top: 1px solid var(--line);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Rank & College Predictor Styles
+   ========================================================================== */
+.predictor-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 30px 0;
+}
+
+.predictor-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+}
+
+.predictor-slider-wrap {
+    margin: 24px 0;
+}
+
+.score-display-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.score-number-badge {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: Georgia, serif;
+    color: var(--green-dark);
+}
+
+.custom-range-slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: #dbe8e1;
+    outline: none;
+    accent-color: var(--green);
+    cursor: pointer;
+}
+
+.prediction-output-box {
+    background: #f8faf9;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.prediction-stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--line);
+}
+
+.prediction-stat-row:last-child {
+    border-bottom: none;
+}
+
+.college-chance-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.chance-high { background: #dcfce7; color: #15803d; }
+.chance-mod { background: #fef3c7; color: #b45309; }
+.chance-def { background: #e0e7ff; color: #4338ca; }
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .cbt-exam-grid {
+        grid-template-columns: 1fr;
+    }
+    .cbt-palette-sidebar {
+        border-top: 2px solid var(--line);
+    }
+    .predictor-wrapper {
+        grid-template-columns: 1fr;
+    }
+    .candidate-profile-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .scorecard-summary-tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .candidate-profile-grid {
+        grid-template-columns: 1fr;
+    }
+    .marksheet-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .verified-seal-badge {
+        align-items: flex-start;
+    }
+    .scorecard-summary-tiles {
+        grid-template-columns: 1fr;
+    }
+}
