@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form | Ajmal Super 40</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/forms.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="brand-lockup" href="../index.html" aria-label="Ajmal Super 40 home">
+            <img class="brand-logo" src="../images.jpg" alt="Ajmal Super 40 crest">
+            <span class="brand-copy"><span class="brand-name">Ajmal Super 40</span><span class="brand-motto">Empowering Minds, Shaping Futures</span></span>
+        </a>
+        <a class="header-enquiry" href="admission.html">Admission enquiry</a>
+    </header>
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="facilities.html">Facilities</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="results/index.html">Results</a>
+            <a href="admission.html">Admission</a>
+            <a href="resources/index.html">Study Resources</a>
+            <a href="feedback.html" class="active">Feedback</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Student & Parent Feedback Form</h2>
+        <p>We value your thoughts and queries. Please fill out the form below:</p>
+
+        <form class="demo-form" data-success-message="Your feedback is ready. This demo does not send or store messages.">
+            <label for="student-name">Full Name:</label>
+            <input type="text" id="student-name" name="student_name" placeholder="Enter your full name" required>
+
+            <label for="student-email">Email Address:</label>
+            <input type="email" id="student-email" name="student_email" placeholder="example@mail.com" required>
+
+            <label for="class-select">Select Class / Stream:</label>
+            <select id="class-select" name="student_class">
+                <option value="Class 11 Science">Class 11 (Science)</option>
+                <option value="Class 12 Science">Class 12 (Science)</option>
+                <option value="Repeater Batch">NEET/JEE Repeater Batch</option>
+                <option value="Parent/Guardian">Parent / Guardian</option>
+            </select>
+
+            <label for="feedback-message">Feedback / Inquiry:</label>
+            <textarea id="feedback-message" name="feedback" rows="5" placeholder="Write your comments or questions here..." required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+            <p class="form-message" role="status" tabindex="-1" hidden></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ajmal Super 40. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/form-demo.js" defer></script>
+    <script src="../js/inspectdiable.js" defer></script>
+</body>
+</html>
